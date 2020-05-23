@@ -2,7 +2,7 @@ import * as ReactNative from "react-native";
 import * as React from 'react'
 
 declare module "react-native-cached-image" {
-  namespace CachedImage {
+  namespace ReactNativeCachedImage {
     interface Image extends ReactNative.Image {
       /**
        * props for the ActivityIndicator that is shown while the image is downloaded.
@@ -115,8 +115,8 @@ declare module "react-native-cached-image" {
       preloadImages(urls: string[], imageCacheManager: ImageCacheManager, numberOfConcurrentPreloads: number): Promise<any>
     }
   }
-  export class CachedImage extends React.Component<CachedImage.Image, any> {}
-  export class ImageCacheProvider extends React.Component<CachedImage.ImageCacheProvider, any> {}
-  export const ImageCacheManager: CachedImage.ImageCacheManager
-  export const ImageCachePreloader: CachedImage.ImageCachePreloader
+  export class CachedImage extends React.Component<ReactNativeCachedImage.Image, any> {}
+  export class ImageCacheProvider extends React.Component<ReactNativeCachedImage.ImageCacheProvider, any> {}
+  export const ImageCacheManager: ReactNativeCachedImage.ImageCacheManager
+  export const ImageCachePreloader: ReactNativeCachedImage.ImageCachePreloader
 }
